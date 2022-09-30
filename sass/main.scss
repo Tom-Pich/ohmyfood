@@ -4,9 +4,10 @@ $color1: #9356DC;
 $color2: #FF79DA;
 $color3: #99E2D0;
 $shadow-color: #3333;
+$grey-100: #444;
+$grey-300: #666;
 $grey-500: #EAEAEA;
 $grey-700: #F6F6F6;
-$grey-100: #444;
 $shadow-button: 0 5px 5px 0 $shadow-color ;
 
 @mixin std-side-padding {padding: 0 15px}
@@ -14,19 +15,36 @@ $shadow-button: 0 5px 5px 0 $shadow-color ;
 /* Default tags */
 body {
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 17px;
 }
 h2 {
-    font-size: 135%;
-    margin: 50px 0 15px 0;
+    font-size: 140%;
+    margin: 15px 0;
+}
+h4 {
+    margin: 5px 0;
+}
+p {
+    margin: 5px 0;
+    font-weight: 300;
 }
 section {
     @include std-side-padding();
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 button {
     border: none;
 }
 
+/* Generic classes */
+.bg-grey {background-color: $grey-500;}
+
+.card {
+    border-radius: 25px;
+    box-shadow: $shadow-button;
+    margin: 20px 0;
+}
 
 /* Blocks */
 header {
@@ -58,12 +76,13 @@ header {
     padding: 20px 0;
     background-color: $grey-700;
     h1 {
-        font-size: 135%;
+        font-size: 140%;
         padding: 0 40px;
     }
     p {
         color: $grey-100;
         font-weight: 300;
+        font-size: 105%;
     }
     button {
         padding: 15px;
@@ -78,9 +97,67 @@ header {
 
 .card-function {
     display: flex;
-    justify-content: center;
+    gap: 25px;
+    justify-content: left;
     background-color: $grey-700;
-    padding: 20px 0;
-    border-radius: 25px;
-    box-shadow: $shadow-button;
+    padding: 25px 0 25px 35px;
+    margin-left: 15px;
+    position: relative;
+    &__number {
+        position: absolute;
+        left: -15px;
+        background-color: $color1;
+        padding: 5px 9px;
+        text-align: center;
+        color: white;
+        border-radius: 50%;
+        font-size: 80%;
+    }
+    &__icon {
+        color: $grey-300;
+    }
+    &__text {
+        font-weight: bold;
+    }
+}
+
+.card-restaurant {
+    overflow: hidden;
+    background-color: white;
+    &__img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+    &__label {
+        padding: 10px;
+        position: relative;
+    }
+    .fa-heart {
+        position: absolute;
+        right: 20px;
+        top: 22px;
+        font-size: 120%;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    @include std-side-padding();
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 90%;
+    h4 {
+        margin: 0 0 15px 0;
+        font-size: 110%;
+        font-family: shrikhand;
+        font-weight: normal;
+        }
+    .fas {
+        font-size: 80%;
+        display: inline-block;
+        width: 20px;
+        
+    }
 }
