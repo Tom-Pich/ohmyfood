@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shrikhand&display=swap');
+
+$color1: #9356DC;
+$color2: #FF79DA;
+$color3: #99E2D0;
+$shadow-color: #3333;
+$grey-500: #EAEAEA;
+$grey-700: #F6F6F6;
+$grey-100: #444;
+$shadow-button: 0 5px 5px 0 $shadow-color ;
+
+@mixin std-side-padding {padding: 0 15px}
+
+/* Default tags */
+body {
+    font-family: Roboto;
+    font-size: 18px;
+}
+h2 {
+    font-size: 135%;
+    margin: 50px 0 15px 0;
+}
+section {
+    @include std-side-padding();
+}
+button {
+    border: none;
+}
+
+
+/* Blocks */
+header {
+    box-shadow: 0 2px 2px $shadow-color;
+    padding: 20px 0 10px 0;
+    h2 {
+        font-family: Shrikhand;
+        text-align: center;
+        margin: 0;
+    }
+    position: relative;
+    z-index: 2
+}
+
+.localisation {
+    text-align: center;
+    font-size: 95%;
+    font-weight: bold;
+    color: $grey-100;
+    background-color: $grey-500;
+    padding: 15px 0 15px 0;
+    .fas {
+        margin-right: 15px;
+    }
+}
+
+.exploration {
+    text-align: center;
+    padding: 20px 0;
+    background-color: $grey-700;
+    h1 {
+        font-size: 135%;
+        padding: 0 40px;
+    }
+    p {
+        color: $grey-100;
+        font-weight: 300;
+    }
+    button {
+        padding: 15px;
+        border-radius: 25px;
+        color: white;
+        background-image: linear-gradient(to bottom,$color2, $color1);
+        margin: 15px 0 25px 0;
+        font-size: 90%;
+        box-shadow: $shadow-button;
+    }
+}
+
+.card-function {
+    display: flex;
+    justify-content: center;
+    background-color: $grey-700;
+    padding: 20px 0;
+    border-radius: 25px;
+    box-shadow: $shadow-button;
+}
