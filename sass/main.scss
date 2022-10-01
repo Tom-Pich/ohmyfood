@@ -3,6 +3,7 @@
 $color1: #9356DC;
 $color2: #FF79DA;
 $color3: #99E2D0;
+$color4: #008766;
 $shadow-color: #3333;
 $grey-100: #444;
 $grey-300: #666;
@@ -35,6 +36,10 @@ section {
 }
 button {
     border: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* Generic classes */
@@ -124,6 +129,7 @@ header {
 .card-restaurant {
     overflow: hidden;
     background-color: white;
+    position: relative;
     &__img {
         width: 100%;
         height: 170px;
@@ -138,6 +144,17 @@ header {
         right: 20px;
         top: 22px;
         font-size: 120%;
+    }
+    &--new:before{
+        content: "Nouveau";
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 8px 10px;
+        color: $color4;
+        background-color: lighten($color4, 50%);
+        font-size: 75%;
+        font-weight: bold;
     }
 }
 
