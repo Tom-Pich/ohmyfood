@@ -270,9 +270,15 @@ footer .fas {
 }
 .card-dish__data > :first-child {
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 20px;
+  white-space: nowrap;
 }
 .card-dish .price {
   font-weight: bold;
+  width: 35px;
+  text-align: right;
 }
 
 /*# sourceMappingURL=style.css.map */
