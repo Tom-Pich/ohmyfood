@@ -2,12 +2,14 @@ $color1: #9356DC;
 $color2: #FF79DA;
 $color3: #99E2D0;
 $color4: darken($color3, 50%);
-$shadow-color: #3333;
+$shadow-color: #3335;
+$shadow-color-darker: #333A;
 $grey-100: #444;
 $grey-300: #666;
 $grey-500: #EAEAEA;
 $grey-700: #F6F6F6;
 
 $shadow-button: 0 5px 5px 0 $shadow-color ;
+$shadow-button-augmented: 0 6px 8px 0 $shadow-color-darker;
 
 @mixin std-side-padding {padding: 0 15px}

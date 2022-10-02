@@ -30,6 +30,7 @@ section {
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 a {
@@ -38,7 +39,7 @@ a {
 }
 
 header {
-  box-shadow: 0 2px 2px rgba(51, 51, 51, 0.2);
+  box-shadow: 0 2px 2px rgba(51, 51, 51, 0.3333333333);
   padding: 20px 0 10px 0;
   position: relative;
   position: relative;
@@ -83,8 +84,12 @@ footer .fas {
 
 .card {
   border-radius: 25px;
-  box-shadow: 0 5px 5px 0 rgba(51, 51, 51, 0.2);
+  box-shadow: 0 5px 5px 0 rgba(51, 51, 51, 0.3333333333);
   margin: 20px 0;
+}
+
+.color1 {
+  color: #9356DC;
 }
 
 /* Home */
@@ -115,13 +120,25 @@ footer .fas {
   font-size: 105%;
 }
 .exploration button {
+  display: block;
+  position: relative;
+  top: 0px;
   padding: 15px;
   border-radius: 25px;
   color: white;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-  margin: 15px 0 25px 0;
+  margin: 15px auto 25px auto;
   font-size: 90%;
-  box-shadow: 0 5px 5px 0 rgba(51, 51, 51, 0.2);
+  box-shadow: 0 5px 5px 0 rgba(51, 51, 51, 0.3333333333);
+  transition: box-shadow 0.3s;
+}
+.exploration button:hover {
+  box-shadow: 0 6px 8px 0 rgba(51, 51, 51, 0.6666666667);
+  background-image: linear-gradient(to bottom, #ff88de, #9b63df);
+}
+.exploration button:active {
+  top: 1px;
+  scale: 0.98 0.98;
 }
 
 .card-function {
@@ -136,6 +153,7 @@ footer .fas {
 .card-function__number {
   position: absolute;
   left: -15px;
+  top: 22px;
   background-color: #9356DC;
   padding: 5px 9px;
   text-align: center;
@@ -148,6 +166,9 @@ footer .fas {
 }
 .card-function__text {
   font-weight: bold;
+}
+.card-function:last-child {
+  background-color: #ece1f9;
 }
 
 .card-restaurant {
@@ -169,6 +190,20 @@ footer .fas {
   right: 20px;
   top: 22px;
   font-size: 120%;
+}
+.card-restaurant .fa-heart:before {
+  transition: all 0.2s;
+  opacity: 1;
+}
+.card-restaurant .fa-heart:hover:before {
+  opacity: 0;
+}
+.card-restaurant .fa-heart.hover:before {
+  opacity: 0;
+  color: #9356DC;
+}
+.card-restaurant .fa-heart.hover:hover:before {
+  opacity: 1;
 }
 .card-restaurant--new:before {
   content: "Nouveau";
