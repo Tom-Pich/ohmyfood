@@ -1,49 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shrikhand&display=swap');
+@import "./utils";
+@import "./base";
 
-$color1: #9356DC;
-$color2: #FF79DA;
-$color3: #99E2D0;
-$color4: #008766;
-$shadow-color: #3333;
-$grey-100: #444;
-$grey-300: #666;
-$grey-500: #EAEAEA;
-$grey-700: #F6F6F6;
-$shadow-button: 0 5px 5px 0 $shadow-color ;
-
-@mixin std-side-padding {padding: 0 15px}
-
-/* Default tags */
-body {
-    font-family: Roboto;
-    font-size: 17px;
-}
-h2 {
-    font-size: 140%;
-    margin: 15px 0;
-}
-h4 {
-    margin: 5px 0;
-}
-p {
-    margin: 5px 0;
-    font-weight: 300;
-}
-section {
-    @include std-side-padding();
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-button {
-    border: none;
-}
-a {
-    color: inherit;
-    text-decoration: none;
-}
 
 /* Generic classes */
-.bg-grey {background-color: $grey-500;}
+.bg-grey {
+    background-color: $grey-500;
+}
 
 .card {
     border-radius: 25px;
@@ -51,19 +13,7 @@ a {
     margin: 20px 0;
 }
 
-/* Blocks */
-header {
-    box-shadow: 0 2px 2px $shadow-color;
-    padding: 20px 0 10px 0;
-    h2 {
-        font-family: Shrikhand;
-        text-align: center;
-        margin: 0;
-    }
-    position: relative;
-    z-index: 2
-}
-
+/* Home */
 .localisation {
     text-align: center;
     font-size: 95%;
@@ -152,29 +102,69 @@ header {
         right: 15px;
         padding: 8px 10px;
         color: $color4;
-        background-color: lighten($color4, 50%);
+        background-color: $color3;
         font-size: 75%;
         font-weight: bold;
     }
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    @include std-side-padding();
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-size: 90%;
-    h4 {
-        margin: 0 0 15px 0;
-        font-size: 110%;
+/* Page restaurant */
+.restaurant-banner {
+    img {
+        width: 100%;
+    }
+}
+
+.menu {
+    margin-top: -40px;
+    padding-top: 15px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: $grey-700;
+    position: relative;
+    z-index: 1;
+    h2 {
         font-family: shrikhand;
-        font-weight: normal;
+        font-size: 165%;
+    }
+    &__icon {
+        position: absolute;
+        top: 35px;
+        right: 15px;
+        font-size: 130%;
+        color: $grey-100;
+    }
+    h3 {
+        margin-top: 35px;
+        color: $grey-300;
+        font-weight: 400;
+        position: relative;
+    }
+    h3:before {
+        content:"";
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        width: 50px;
+        height: 3px;
+        background-color: $color3;
+    }
+ 
+}
+
+.card-dish {
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    &__data {
+        display: flex;
+        justify-content: space-between;
+        font-size: 90%;
+        & > :first-child {
+            font-weight: 300;
         }
-    .fas {
-        font-size: 80%;
-        display: inline-block;
-        width: 20px;
-        
+    }
+    .price {
+        font-weight: bold;
     }
 }
