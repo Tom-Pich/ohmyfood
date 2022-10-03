@@ -189,24 +189,55 @@
 }
 
 .card-dish {
-    padding: 10px;
     background-color: white;
     border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+
+    & > :first-child{
+        flex: 1;
+        padding: 10px;
+    }
+
     &__data {
         display: flex;
         justify-content: space-between;
         font-size: 90%;
+
         & > :first-child {
             font-weight: 300;
             overflow: hidden;
             text-overflow: ellipsis;
             height: 20px;
             white-space: nowrap;
+            flex: 1;
         }
     }
     .price {
         font-weight: bold;
         width: 35px;
         text-align: right;
+    }
+    .fa-check-circle {
+        color: white;
+        background-color: $color3;
+        width: 70px;
+        transition: width 0.4s;
+        &::before {
+            display: inline-block;
+            position: relative;
+            top: 40%;
+            left: 40%;
+            transform: rotate(180deg);
+            transition: transform 0.35s 0.1s
+        }
+    }
+
+    &:hover .fa-check-circle {
+        width: 70px;
+
+        &::before {
+            transform: rotate(0);
+        }
     }
 }

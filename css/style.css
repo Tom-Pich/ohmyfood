@@ -259,9 +259,14 @@ footer .fas {
 }
 
 .card-dish {
-  padding: 10px;
   background-color: white;
   border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+}
+.card-dish > :first-child {
+  flex: 1;
+  padding: 10px;
 }
 .card-dish__data {
   display: flex;
@@ -274,11 +279,32 @@ footer .fas {
   text-overflow: ellipsis;
   height: 20px;
   white-space: nowrap;
+  flex: 1;
 }
 .card-dish .price {
   font-weight: bold;
   width: 35px;
   text-align: right;
+}
+.card-dish .fa-check-circle {
+  color: white;
+  background-color: #99E2D0;
+  width: 70px;
+  transition: width 0.4s;
+}
+.card-dish .fa-check-circle::before {
+  display: inline-block;
+  position: relative;
+  top: 40%;
+  left: 40%;
+  transform: rotate(180deg);
+  transition: transform 0.35s 0.1s;
+}
+.card-dish:hover .fa-check-circle {
+  width: 70px;
+}
+.card-dish:hover .fa-check-circle::before {
+  transform: rotate(0);
 }
 
 /*# sourceMappingURL=style.css.map */
