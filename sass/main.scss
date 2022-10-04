@@ -197,6 +197,7 @@
     & > :first-child{
         flex: 1;
         padding: 10px;
+        width: 60%; /* ??? */
     }
 
     &__data {
@@ -215,14 +216,15 @@
     }
     .price {
         font-weight: bold;
-        width: 35px;
         text-align: right;
+        flex:0 0 35px;
     }
     .fa-check-circle {
         color: white;
         background-color: $color3;
-        width: 70px;
-        transition: width 0.4s;
+        width: 0; /* ??? */
+        flex: 0 0 0;
+        transition: flex 0.4s;
         &::before {
             display: inline-block;
             position: relative;
@@ -235,6 +237,7 @@
 
     &:hover .fa-check-circle {
         width: 70px;
+        flex: 0 0 70px;
 
         &::before {
             transform: rotate(0);
