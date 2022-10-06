@@ -258,23 +258,55 @@ footer .fas {
   background-color: #99E2D0;
 }
 
-.card-dish {
+div.card-dish {
   background-color: white;
   border-radius: 15px;
   display: flex;
   overflow: hidden;
 }
-.card-dish > :first-child {
+div.card-dish:nth-of-type(2) {
+  animation: opacity 0.5s both calc((2s) * 0.25) ease-out, from-bottom 0.5s both calc((2s) * 0.25);
+}
+div.card-dish:nth-of-type(3) {
+  animation: opacity 0.5s both calc((3s) * 0.25) ease-out, from-bottom 0.5s both calc((3s) * 0.25);
+}
+div.card-dish:nth-of-type(4) {
+  animation: opacity 0.5s both calc((4s) * 0.25) ease-out, from-bottom 0.5s both calc((4s) * 0.25);
+}
+div.card-dish:nth-of-type(5) {
+  animation: opacity 0.5s both calc((5s) * 0.25) ease-out, from-bottom 0.5s both calc((5s) * 0.25);
+}
+div.card-dish:nth-of-type(6) {
+  animation: opacity 0.5s both calc((6s) * 0.25) ease-out, from-bottom 0.5s both calc((6s) * 0.25);
+}
+div.card-dish:nth-of-type(7) {
+  animation: opacity 0.5s both calc((7s) * 0.25) ease-out, from-bottom 0.5s both calc((7s) * 0.25);
+}
+div.card-dish:nth-of-type(8) {
+  animation: opacity 0.5s both calc((8s) * 0.25) ease-out, from-bottom 0.5s both calc((8s) * 0.25);
+}
+div.card-dish:nth-of-type(9) {
+  animation: opacity 0.5s both calc((9s) * 0.25) ease-out, from-bottom 0.5s both calc((9s) * 0.25);
+}
+div.card-dish:nth-of-type(10) {
+  animation: opacity 0.5s both calc((10s) * 0.25) ease-out, from-bottom 0.5s both calc((10s) * 0.25);
+}
+div.card-dish h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+div.card-dish > :first-child {
   flex: 1;
   padding: 10px;
   width: 60%; /* ??? */
 }
-.card-dish__data {
+div.card-dish__data {
   display: flex;
   justify-content: space-between;
   font-size: 90%;
 }
-.card-dish__data > :first-child {
+div.card-dish__data > :first-child {
   font-weight: 300;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -282,19 +314,19 @@ footer .fas {
   white-space: nowrap;
   flex: 1;
 }
-.card-dish .price {
+div.card-dish .price {
   font-weight: bold;
   text-align: right;
   flex: 0 0 35px;
 }
-.card-dish .fa-check-circle {
+div.card-dish .fa-check-circle {
   color: white;
   background-color: #99E2D0;
   width: 0; /* ??? */
   flex: 0 0 0;
-  transition: flex 0.4s;
+  transition: flex 0.4s, width 0.4s;
 }
-.card-dish .fa-check-circle::before {
+div.card-dish .fa-check-circle::before {
   display: inline-block;
   position: relative;
   top: 40%;
@@ -302,12 +334,29 @@ footer .fas {
   transform: rotate(180deg);
   transition: transform 0.35s 0.1s;
 }
-.card-dish:hover .fa-check-circle {
+div.card-dish:hover .fa-check-circle {
   width: 70px;
   flex: 0 0 70px;
 }
-.card-dish:hover .fa-check-circle::before {
+div.card-dish:hover .fa-check-circle::before {
   transform: rotate(0);
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes from-bottom {
+  from {
+    transform: translateY(15px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

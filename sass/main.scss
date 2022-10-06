@@ -188,11 +188,24 @@
  
 }
 
-.card-dish {
+div.card-dish {
     background-color: white;
     border-radius: 15px;
     display: flex;
     overflow: hidden;
+
+    @for $i from 2 through 10 {
+        &:nth-of-type(#{$i}) {
+            $delay: calc((#{$i}s) * 0.25);
+            animation: opacity 0.5s both $delay ease-out, from-bottom 0.5s both $delay;
+        }
+    }
+
+    h4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
     & > :first-child{
         flex: 1;
@@ -224,7 +237,7 @@
         background-color: $color3;
         width: 0; /* ??? */
         flex: 0 0 0;
-        transition: flex 0.4s;
+        transition: flex 0.4s, width .4s;
         &::before {
             display: inline-block;
             position: relative;
@@ -243,4 +256,14 @@
             transform: rotate(0);
         }
     }
+}
+
+@keyframes opacity {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+@keyframes from-bottom {
+    from {transform: translateY(15px)}
+    to {transform: translateY(0);}
 }
