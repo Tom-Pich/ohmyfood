@@ -134,26 +134,26 @@ footer .fas {
 }
 @keyframes translate-right {
   0% {
-    transform: translateY(0) translateX(0);
+    transform: translateY(0), translateX(0);
   }
   50% {
     transform: translateY(10px) translateX(17px);
     animation-timing-function: ease-in-out;
   }
   to {
-    transform: translateY(0) translateX(0);
+    transform: translateY(0), translateX(0);
   }
 }
 @keyframes translate-left {
   0% {
-    transform: translateY(0) translateX(0);
+    transform: translateY(0), translateX(0);
   }
   50% {
     transform: translateY(10px) translateX(-17px);
     animation-timing-function: ease-in-out;
   }
   to {
-    transform: translateY(0) translateX(0);
+    transform: translateY(0), translateX(0);
   }
 }
 @keyframes disappear {
@@ -305,6 +305,8 @@ footer .fas {
 /* Page restaurant */
 .restaurant-banner img {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 .menu {
@@ -375,6 +377,9 @@ div.card-dish:nth-of-type(9) {
 }
 div.card-dish:nth-of-type(10) {
   animation: opacity 0.5s both calc((10s) * 0.25) ease-out, from-bottom 0.5s both calc((10s) * 0.25);
+}
+div.card-dish:nth-of-type(11) {
+  animation: opacity 0.5s both calc((11s) * 0.25) ease-out, from-bottom 0.5s both calc((11s) * 0.25);
 }
 div.card-dish h4 {
   overflow: hidden;
