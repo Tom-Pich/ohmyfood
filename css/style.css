@@ -221,26 +221,26 @@ footer .fas {
 }
 @keyframes translate-right {
   0% {
-    transform: translateY(0), translateX(0);
+    transform: translateY(0) translateX(0);
   }
   50% {
     transform: translateY(10px) translateX(17px);
     animation-timing-function: ease-in-out;
   }
   to {
-    transform: translateY(0), translateX(0);
+    transform: translateY(0) translateX(0);
   }
 }
 @keyframes translate-left {
   0% {
-    transform: translateY(0), translateX(0);
+    transform: translateY(0) translateX(0);
   }
   50% {
     transform: translateY(10px) translateX(-17px);
     animation-timing-function: ease-in-out;
   }
   to {
-    transform: translateY(0), translateX(0);
+    transform: translateY(0) translateX(0);
   }
 }
 @keyframes disappear {
