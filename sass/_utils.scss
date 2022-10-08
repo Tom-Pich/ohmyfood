@@ -12,6 +12,7 @@ $grey-700: #F6F6F6;
 $shadow-button: 0 5px 5px 0 $shadow-color ;
 $shadow-button-augmented: 0 6px 8px 0 $shadow-color-darker;
 
-$desktop-width: 900px;
+$desktop-width-medium: 850px;
+$desktop-width-large: 1150px;
 
 @mixin std-side-padding {padding: 0 15px}

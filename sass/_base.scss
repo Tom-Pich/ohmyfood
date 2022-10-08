@@ -11,22 +11,20 @@ a {color: inherit; text-decoration: none;}
 section {@include std-side-padding(); padding-top: 40px; padding-bottom: 40px;}
 
 button {border: none; cursor: pointer;
-    
 	&.main {display: block; position: relative; top: 0px; padding: 15px; border-radius: 25px; color: white; background-image: linear-gradient(to bottom,$color2, $color1); margin: 25px auto 25px auto; font-size: 90%; box-shadow: $shadow-button; transition: box-shadow .3s;
-	
 		&:hover {box-shadow: $shadow-button-augmented; background-image: linear-gradient(to bottom, lighten($color2, 3%), lighten($color1, 3%));}
 		&:active {top: 1px; scale: .98 .98;}
     }
 }
 
 header {box-shadow: 0 2px 2px $shadow-color; padding: 20px 0 10px 0; position: relative; position: relative; z-index: 2;
-
-	h2 {font-family: Shrikhand; text-align: center; margin: 0;}
+	h2 {font-family: Shrikhand; text-align: center; margin: 0;
+		@media screen and (min-width: #{$desktop-width-medium}) {font-size: 200%;}
+	}
 	a {display: block; position: absolute; top: 20px; left: 10px;}
 }
 
 footer {background-color: #333; color: white; @include std-side-padding(); padding-top: 30px; padding-bottom: 30px; font-size: 90%;
-	
 	h4 {margin: 0 0 15px 0; font-size: 110%; font-family: shrikhand; font-weight: normal;}
 	.fas {font-size: 80%; display: inline-block; width: 20px;}
 }
@@ -52,6 +50,6 @@ footer {background-color: #333; color: white; @include std-side-padding(); paddi
 }
 
 /* affichage desktop */
-@media screen and (min-width: #{$desktop-width}) {
-	.desktop-flex {display: flex; gap: 50px; align-items: center; justify-content: space-between;}
+@media screen and (min-width: #{$desktop-width-medium}) {
+	.desktop-flex {display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px 30px;}
 }

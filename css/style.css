@@ -72,6 +72,11 @@ header h2 {
   text-align: center;
   margin: 0;
 }
+@media screen and (min-width: 850px) {
+  header h2 {
+    font-size: 200%;
+  }
+}
 header a {
   display: block;
   position: absolute;
@@ -148,12 +153,13 @@ footer .fas {
 }
 
 /* affichage desktop */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 850px) {
   .desktop-flex {
     display: flex;
-    gap: 50px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 30px;
   }
 }
 .loading-spinner {
@@ -281,6 +287,9 @@ footer .fas {
   position: relative;
   flex: 1;
 }
+@media screen and (min-width: 1150px) {
+  .card-function { /* width: clamp(220px, 25%, 260px) */ }
+}
 .card-function__number {
   position: absolute;
   left: -15px;
@@ -306,6 +315,7 @@ footer .fas {
   overflow: hidden;
   background-color: white;
   position: relative;
+  display: block;
   /* .fa-heart {position: absolute; right: 20px; top: 22px; font-size: 120%;
   	&:before {transition: all .2s; opacity: 1;}
   	&:hover:before {opacity: 0;}
@@ -314,6 +324,16 @@ footer .fas {
   		&:hover:before {opacity: 1;}
   	}
   } */
+}
+@media screen and (min-width: 850px) {
+  .card-restaurant {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .card-restaurant {
+    width: 20%;
+  }
 }
 .card-restaurant__img {
   width: 100%;
@@ -349,13 +369,21 @@ footer .fas {
 }
 
 .menu {
-  margin-top: -40px;
+  margin: -40px auto 0 auto;
   padding-top: 15px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-color: #F6F6F6;
   position: relative;
   z-index: 1;
+  max-width: 850px;
+}
+@media screen and (min-width: 850px) {
+  .menu {
+    font-size: 110%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 .menu h2 {
   font-family: shrikhand;

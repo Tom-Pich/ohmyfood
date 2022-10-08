@@ -14,13 +14,16 @@
 }
 
 .card-function {display: flex; gap: 25px; justify-content: left; background-color: $grey-700; padding: 25px 25px 25px 35px; margin-left: 15px; position: relative; flex: 1;
+	@media screen and (min-width: #{$desktop-width-large}) {/* width: clamp(220px, 25%, 260px) */}
 	&__number {position: absolute; left: -15px; top: 22px; background-color: $color1; padding: 5px 9px; text-align: center; color: white; border-radius: 50%; font-size: 80%;}
 	&__icon {color: $grey-300;}
 	&__text {font-weight: bold;}
 	&:last-child {background-color: lighten($color1, 33%);}
 }
 
-.card-restaurant {overflow: hidden; background-color: white; position: relative;
+.card-restaurant {overflow: hidden; background-color: white; position: relative; display: block; ;
+	@media screen and (min-width: #{$desktop-width-medium}) {width: 40%}
+	@media screen and (min-width: #{$desktop-width-large}) {width: 20%}
 	&__img {width: 100%; height: 170px; object-fit: cover;}
 	&__label {padding: 10px; position: relative;}
 	.heart {position: absolute; right: 20px; top: 25px;}
@@ -38,7 +41,8 @@
 /* Page restaurant */
 .restaurant-banner {img {width: 100%; height: 250px; object-fit: cover;}}
 
-.menu {margin-top: -40px; padding-top: 15px; border-top-left-radius: 25px; border-top-right-radius: 25px; background-color: $grey-700; position: relative; z-index: 1;
+.menu {margin: -40px auto 0 auto; padding-top: 15px; border-top-left-radius: 25px; border-top-right-radius: 25px; background-color: $grey-700; position: relative; z-index: 1; max-width: 850px;
+	@media screen and (min-width: #{$desktop-width-medium}) {font-size: 110%; padding-left: 50px; padding-right: 50px;}
     h2 {font-family: shrikhand; font-size: 165%;}
     .heart {position: absolute; top: 38px; right: 15px;}
     h3 {margin-top: 35px; color: $grey-300; font-weight: 400; position: relative; }
