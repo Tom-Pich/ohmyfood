@@ -50,3 +50,8 @@ footer {background-color: #333; color: white; @include std-side-padding(); paddi
 		&:hover:before {opacity: 1;}
 	}
 }
+
+/* affichage desktop */
+@media screen and (min-width: #{$desktop-width}) {
+	.desktop-flex {display: flex; gap: 50px; align-items: center; justify-content: space-between;}
+}
