@@ -3,261 +3,64 @@
 @import "./spinner";
 
 
-/* Generic classes */
-.bg-grey {
-    background-color: $grey-500;
-}
-
-.card {
-    border-radius: 25px;
-    box-shadow: $shadow-button;
-    margin: 20px 0;
-}
-
-.color1{
-    color: $color1;
-}
-
 /* Home */
-.localisation {
-    text-align: center;
-    font-size: 95%;
-    font-weight: bold;
-    color: $grey-100;
-    background-color: $grey-500;
-    padding: 15px 0 15px 0;
-    .fas {
-        margin-right: 15px;
-    }
+.localisation {text-align: center; font-size: 95%; font-weight: bold; color: $grey-100; background-color: $grey-500; padding: 15px 0 15px 0;
+    .fas {margin-right: 15px;}
 }
 
-.exploration {
-    text-align: center;
-    padding: 20px 0;
-    background-color: $grey-700;
-    h1 {
-        font-size: 140%;
-        padding: 0 40px;
-    }
-    p {
-        color: $grey-100;
-        font-weight: 300;
-        font-size: 105%;
-    }
-    button {
-        display: block;
-        position: relative;
-        top: 0px;
-        padding: 15px;
-        border-radius: 25px;
-        color: white;
-        background-image: linear-gradient(to bottom,$color2, $color1);
-        margin: 15px auto 25px auto;
-        font-size: 90%;
-        box-shadow: $shadow-button;
-        transition: box-shadow .3s;
-        &:hover {
-            box-shadow: $shadow-button-augmented;
-            background-image: linear-gradient(to bottom, lighten($color2, 3%), lighten($color1, 3%));
-        }
-        &:active {
-            top: 1px;
-            scale: .98 .98;
-        }
-    }
+.exploration {text-align: center; padding: 20px 0; background-color: $grey-700;
+    h1 {font-size: 140%; padding: 0 40px; }
+    p {color: $grey-100; font-weight: 300; font-size: 105%;}
 }
 
-.card-function {
-    display: flex;
-    gap: 25px;
-    justify-content: left;
-    background-color: $grey-700;
-    padding: 25px 0 25px 35px;
-    margin-left: 15px;
-    position: relative;
-    &__number {
-        position: absolute;
-        left: -15px;
-        top: 22px;
-        background-color: $color1;
-        padding: 5px 9px;
-        text-align: center;
-        color: white;
-        border-radius: 50%;
-        font-size: 80%;
-    }
-    &__icon {
-        color: $grey-300;
-    }
-    &__text {
-        font-weight: bold;
-    }
-    &:last-child {
-        background-color: lighten($color1, 33%);
-    }
+.card-function {display: flex; gap: 25px; justify-content: left; background-color: $grey-700; padding: 25px 0 25px 35px; margin-left: 15px; position: relative;
+	&__number {position: absolute; left: -15px; top: 22px; background-color: $color1; padding: 5px 9px; text-align: center; color: white; border-radius: 50%; font-size: 80%;}
+	&__icon {color: $grey-300;}
+	&__text {font-weight: bold;}
+	&:last-child {background-color: lighten($color1, 33%);}
 }
 
-.card-restaurant {
-    overflow: hidden;
-    background-color: white;
-    position: relative;
-    &__img {
-        width: 100%;
-        height: 170px;
-        object-fit: cover;
-    }
-    &__label {
-        padding: 10px;
-        position: relative;
-    }
-    .fa-heart {
-        position: absolute;
-        right: 20px;
-        top: 22px;
-        font-size: 120%;
-        &:before {
-            transition: all .2s;
-            opacity: 1;
-        }
-        &:hover:before {
-            opacity: 0;
-        }
-        &.hover {
-            &:before {
-                opacity: 0;
-                color: $color1;
-            }
-            &:hover:before {
-                opacity: 1;
-            }
-        }
-    }
-    &--new:before{
-        content: "Nouveau";
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        padding: 8px 10px;
-        color: $color4;
-        background-color: $color3;
-        font-size: 75%;
-        font-weight: bold;
-    }
+.card-restaurant {overflow: hidden; background-color: white; position: relative;
+	&__img {width: 100%; height: 170px; object-fit: cover;}
+	&__label {padding: 10px; position: relative;}
+	.heart {position: absolute; right: 20px; top: 25px;}
+	/* .fa-heart {position: absolute; right: 20px; top: 22px; font-size: 120%;
+		&:before {transition: all .2s; opacity: 1;}
+		&:hover:before {opacity: 0;}
+		&.hover {
+			&:before {opacity: 0; color: $color1;}
+			&:hover:before {opacity: 1;}
+		}
+	} */
+	&--new:before{content: "Nouveau"; position: absolute; top: 15px; right: 15px; padding: 8px 10px; color: $color4; background-color: $color3; font-size: 75%; font-weight: bold; }
 }
 
 /* Page restaurant */
-.restaurant-banner {
-    img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
+.restaurant-banner {img {width: 100%; height: 250px; object-fit: cover;}}
+
+.menu {margin-top: -40px; padding-top: 15px; border-top-left-radius: 25px; border-top-right-radius: 25px; background-color: $grey-700; position: relative; z-index: 1;
+    h2 {font-family: shrikhand; font-size: 165%;}
+    .heart {position: absolute; top: 38px; right: 15px;}
+    h3 {margin-top: 35px; color: $grey-300; font-weight: 400; position: relative; }
+    h3:before {content:""; display: block; position: absolute; bottom: -10px; width: 50px; height: 3px; background-color: $color3;}
+    button.main {margin-top: 50px; padding-left: 50px; padding-right: 50px;}
 }
 
-.menu {
-    margin-top: -40px;
-    padding-top: 15px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    background-color: $grey-700;
-    position: relative;
-    z-index: 1;
-    h2 {
-        font-family: shrikhand;
-        font-size: 165%;
+div.card-dish {background-color: white; border-radius: 15px; display: flex; overflow: hidden;
+	@for $i from 2 through 11 {
+        &:nth-of-type(#{$i}) {$delay: calc((#{$i}s) * 0.25); animation: opacity 0.5s both $delay ease-out, from-bottom 0.5s both $delay;}
     }
-    &__icon {
-        position: absolute;
-        top: 35px;
-        right: 15px;
-        font-size: 130%;
-        color: $grey-100;
-    }
-    h3 {
-        margin-top: 35px;
-        color: $grey-300;
-        font-weight: 400;
-        position: relative;
-    }
-    h3:before {
-        content:"";
-        display: block;
-        position: absolute;
-        bottom: -10px;
-        width: 50px;
-        height: 3px;
-        background-color: $color3;
-    }
- 
-}
-
-div.card-dish {
-    background-color: white;
-    border-radius: 15px;
-    display: flex;
-    overflow: hidden;
-
-    @for $i from 2 through 11 {
-        &:nth-of-type(#{$i}) {
-            $delay: calc((#{$i}s) * 0.25);
-            animation: opacity 0.5s both $delay ease-out, from-bottom 0.5s both $delay;
-        }
-    }
-
-    h4 {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    & > :first-child{
-        flex: 1;
-        padding: 10px;
-        width: 60%; /* ??? */
-    }
-
-    &__data {
-        display: flex;
-        justify-content: space-between;
-        font-size: 90%;
-
-        & > :first-child {
-            font-weight: 300;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            height: 20px;
-            white-space: nowrap;
-            flex: 1;
-        }
-    }
-    .price {
-        font-weight: bold;
-        text-align: right;
-        flex:0 0 35px;
-    }
-    .fa-check-circle {
-        color: white;
-        background-color: $color3;
-        width: 0; /* ??? */
-        flex: 0 0 0;
-        transition: flex 0.4s, width .4s;
-        &::before {
-            display: inline-block;
-            position: relative;
-            top: 40%;
-            left: 40%;
-            transform: rotate(180deg);
-            transition: transform 0.35s 0.1s
-        }
-    }
-
-    &:hover .fa-check-circle {
-        width: 70px;
-        flex: 0 0 70px;
-
-        &::before {
-            transform: rotate(0);
-        }
+    h4 {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+	& > :first-child{flex: 1; padding: 10px; width: 60%; /* ??? */}
+    &__data {display: flex; justify-content: space-between; font-size: 90%;
+		& > :first-child {font-weight: 300; overflow: hidden; text-overflow: ellipsis; height: 20px; white-space: nowrap; flex: 1;}
+	}
+    .price {font-weight: bold; text-align: right; flex:0 0 35px;}
+    .fa-check-circle {color: white; background-color: $color3; width: 0; /* ??? */ flex: 0 0 0; transition: flex 0.4s, width .4s;
+		&::before {display: inline-block; position: relative; top: 40%; left: 40%; transform: rotate(180deg); transition: transform 0.35s 0.1s}
+	}
+    &:hover .fa-check-circle {width: 70px; flex: 0 0 70px;
+        &::before {transform: rotate(0);}
     }
 }
 
