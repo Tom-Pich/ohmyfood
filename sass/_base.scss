@@ -40,14 +40,14 @@ footer {background-color: #333; color: white; @include std-side-padding(); paddi
 	&:hover {fill: #9356DCff}
 }
 
-.fa-heart-false {position: absolute; right: 20px; top: 22px; font-size: 120%;
+/* .fa-heart-false {position: absolute; right: 20px; top: 22px; font-size: 120%;
 	&:before {transition: all .2s; opacity: 1;}
 	&:hover:before {opacity: 0;}
 	&.hover {
 		&:before {opacity: 0; color: $color1;}
 		&:hover:before {opacity: 1;}
 	}
-}
+} */
 
 /* affichage desktop */
 @media screen and (min-width: #{$desktop-width-medium}) {

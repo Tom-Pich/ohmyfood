@@ -51,7 +51,7 @@
 }
 
 div.card-dish {background-color: white; border-radius: 15px; display: flex; overflow: hidden;
-	@for $i from 2 through 11 {
+	@for $i from 1 through 11 {
         &:nth-of-type(#{$i}) {$delay: calc((#{$i}s) * 0.25); animation: opacity 0.5s both $delay ease-out, from-bottom 0.5s both $delay;}
     }
     h4 {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
